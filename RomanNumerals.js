@@ -20,6 +20,7 @@ let romanToInt = (s) => {
   let currentVal;
   let next;
   let nextVal;
+
   let total = 0;
 
   for (let i = 0; i < array.length; i++) {
@@ -29,7 +30,7 @@ let romanToInt = (s) => {
     next = array[i + 1];
     nextVal = nums[next];
 
-    if (currentVal < nextVal) {
+    if (current < nextVal) {
       total -= currentVal;
     } else {
       total += currentVal;
@@ -37,4 +38,4 @@ let romanToInt = (s) => {
   }
   return total;
 };
-romanToInt("XL");
+console.log(romanToInt("III"));
